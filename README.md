@@ -9,12 +9,18 @@ This repository holds everything I write while learning C#. Each week has its ow
 ## Structure
 
 ```
-Serious C# Lessons/
+SERIOUS C# LESSONS/
 ├── .gitignore
 ├── README.md
 ├── DOCS/            # notes and planning documents
 ├── WEEK_ONE/
 │   └── LessonOne/   # project: LessonOne.csproj + Program.cs
+│   └── LessonTwo/   # project: LessonTwo.csproj + Program.cs
+│   └── LessonThree/   # project: LessonThree.csproj + Program.cs
+│   └── LessonFour/   # project: LessonFour.csproj + Program.cs
+│   └── LessonFive/   # project: LessonFive.csproj + Program.cs
+│   └── NumGuessingGame/   # project: NumGuessingGame.csproj + Program.cs
+│   └── MenuCalculator/   # project: MenuCalculator.csproj + Program.cs
 └── ...              # a new folder is added each week
 ```
 

@@ -21,7 +21,7 @@ namespace LessonThree
             int newNumTwo = price / (int)num;
             Console.WriteLine($"New Number = {newNumTwo}");
 
-            // using int.TryParse throws an error message if the conversion failed, unlike just using Parse.
+            // using int.TryParse returns false if the conversion failed, unlike just using Parse.
             // Using Parse only stops the program from running once it encounters an error, instead of catching it.
             string valueString = "123";
             //int value;
