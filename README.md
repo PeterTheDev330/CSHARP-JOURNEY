@@ -22,6 +22,8 @@ SERIOUS C# LESSONS/
 │   └── NumGuessingGame/   # project: NumGuessingGame.csproj + Program.cs
 │   └── MenuCalculator/   # project: MenuCalculator.csproj + Program.cs
 │   └── TextQuizGame/   # project: TextQuizGame.csproj + Program.cs
+├── WEEK_ONE/
+│   └── LessonOne/   # project: LessonOne.csproj + Program.cs
 └── ...              # a new folder is added each week
 ```
 
@@ -48,7 +50,7 @@ dotnet run
 
 ## Progress
 
-- [ ] Week 1: Setup and core syntax (number-guessing game, menu calculator)
+- [x] Week 1: Setup and core syntax (number-guessing game, menu calculator)
 - [ ] Week 2: Methods, collections and debugging (console to-do list)
 - [ ] Week 3: Encapsulation and abstraction (bank account system)
 - [ ] Week 4: Inheritance, polymorphism and interfaces
