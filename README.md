@@ -22,7 +22,7 @@ SERIOUS C# LESSONS/
 │   └── NumGuessingGame/   # project: NumGuessingGame.csproj + Program.cs
 │   └── MenuCalculator/   # project: MenuCalculator.csproj + Program.cs
 │   └── TextQuizGame/   # project: TextQuizGame.csproj + Program.cs
-├── WEEK_ONE/
+├── WEEK_TWO/
 │   └── LessonOne/   # project: LessonOne.csproj + Program.cs
 └── ...              # a new folder is added each week
 ```
