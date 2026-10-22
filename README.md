@@ -28,6 +28,8 @@ SERIOUS C# LESSONS/
 │   └── LessonThree/   # project: LessonThree.csproj + Program.cs
 │   └── LessonFour/   # project: LessonFour.csproj + Program.cs
 │   └── LessonFive/   # project: LessonFive.csproj + Program.cs
+│   └── ToDoList/   # project: ToDoList.csproj + Program.cs
+│   └── ToDoList_TryOut/   # project: ToDoList_TryOut.csproj + Program.cs
 └── ...              # a new folder is added each week
 ```
 
