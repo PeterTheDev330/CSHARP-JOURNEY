@@ -84,6 +84,12 @@ namespace ToDoList
 
             choice = ValidateInput("Choose task number to mark: ", 1, tasks.Count);
 
+            if (done[choice - 1] == true)
+            {
+                Console.WriteLine("Task already marked as done.");
+                return;
+            }
+
             done[choice - 1] = true;
             Console.WriteLine("Task marked as done successfully.");
 
