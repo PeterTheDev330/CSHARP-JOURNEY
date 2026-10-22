@@ -24,6 +24,10 @@ SERIOUS C# LESSONS/
 │   └── TextQuizGame/   # project: TextQuizGame.csproj + Program.cs
 ├── WEEK_TWO/
 │   └── LessonOne/   # project: LessonOne.csproj + Program.cs
+│   └── LessonTwo/   # project: LessonTwo.csproj + Program.cs
+│   └── LessonThree/   # project: LessonThree.csproj + Program.cs
+│   └── LessonFour/   # project: LessonFour.csproj + Program.cs
+│   └── LessonFive/   # project: LessonFive.csproj + Program.cs
 └── ...              # a new folder is added each week
 ```
 

@@ -9,11 +9,11 @@ namespace MenuCalculator
     class Program
     {
 
-        static int Validate(int lower, int upper, string promt)
+        static int Validate(int lower, int upper, string prompt)
         {
             int value;
 
-            Console.Write(promt);
+            Console.Write(prompt);
 
             while(!int.TryParse(Console.ReadLine(), out value) || value < lower || value > upper)
             {
