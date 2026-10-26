@@ -28,6 +28,8 @@ SERIOUS C# LESSONS/
 │   └── LessonThree/   # project: LessonThree.csproj + Program.cs
 │   └── LessonFour/   # project: LessonFour.csproj + Program.cs
 │   └── LessonFive/   # project: LessonFive.csproj + Program.cs
+│   └── LessonSix/   # project: LessonSix.csproj + Program.cs
+│   └── LessonSeven/   # project: LessonSeven.csproj + Program.cs
 │   └── ToDoList/   # project: ToDoList.csproj + Program.cs
 │   └── ToDoList_TryOut/   # project: ToDoList_TryOut.csproj + Program.cs
 └── ...              # a new folder is added each week
@@ -57,7 +59,7 @@ dotnet run
 ## Progress
 
 - [x] Week 1: Setup and core syntax (number-guessing game, menu calculator)
-- [ ] Week 2: Methods, collections and debugging (console to-do list)
+- [x] Week 2: Methods, collections and debugging (console to-do list)
 - [ ] Week 3: Encapsulation and abstraction (bank account system)
 - [ ] Week 4: Inheritance, polymorphism and interfaces
 - [ ] Week 5: Collections, LINQ and file I/O
