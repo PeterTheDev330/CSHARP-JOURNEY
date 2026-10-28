@@ -32,6 +32,11 @@ SERIOUS C# LESSONS/
 │   └── LessonSeven/   # project: LessonSeven.csproj + Program.cs
 │   └── ToDoList/   # project: ToDoList.csproj + Program.cs
 │   └── ToDoList_TryOut/   # project: ToDoList_TryOut.csproj + Program.cs
+├── WEEK_THREE/
+│   └── LessonOne   # project: LessonOne.csproj + Program.cs + Person.cs
+│   └── ClassesPractice/  
+│		└── PracticeOne/   # project: PracticeOne.csproj + Program.cs + Person.cs
+│		└── PracticeTwo/   # project: PracticeTwo.csproj + Program.cs + Rectangle.cs
 └── ...              # a new folder is added each week
 ```
 
