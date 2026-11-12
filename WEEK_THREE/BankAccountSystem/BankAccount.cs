@@ -8,7 +8,7 @@ class BankAccount
 
     public int AccountNumber { get; }
     public string Owner { get; }
-    public decimal Balance { get; private set; }
+    public decimal Balance { get; protected set; }
 
     private readonly List<BankAccount> _accounts = new();
     private readonly List<Transaction> _transactions = new();
@@ -75,7 +75,7 @@ class BankAccount
         }
 
         Balance -= amount;
-        _transactions.Add(new Transaction(TransactionType.Deposit, amount, Balance));
+        _transactions.Add(new Transaction(TransactionType.Withdrawal, amount, Balance));
 
     }
 
