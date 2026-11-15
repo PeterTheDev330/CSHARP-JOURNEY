@@ -27,6 +27,24 @@ namespace BankAccountSystem
             return input;
         }
 
+        // static decimal GetInterest(string prompt, double lower, double upper)
+        // {
+
+        //     decimal input;
+
+        //     Console.Write(prompt);
+
+        //     input = Convert.ToDecimal(Console.ReadLine());
+
+        //     while (input < lower || input > upper)
+        //     {
+        //         Console.WriteLine($"Enter a number between {lower} and {upper}");
+        //         Console.Write("Try Again: ");
+        //     }
+
+        //     return input;
+        // }
+
         static int Menu()
         {
             int choice;
@@ -42,9 +60,9 @@ namespace BankAccountSystem
         {
             int choice;
 
-            Console.WriteLine("1. Deposit \n2. Withdraw \n3. Add interest \n4. Show balance \n5. Show statement \n6. Quit");
+            Console.WriteLine("1. Deposit \n2. Add Interest \n3. Withdraw \n4. Show balance \n5. Show statement \n6. Quit");
 
-            choice = ValidateInput("Enter choice: ", 1, 5);
+            choice = ValidateInput("Enter choice: ", 1, 6);
 
             return choice;
         }
@@ -174,7 +192,10 @@ namespace BankAccountSystem
 
                         case 2:
                             string savingsOwnerName = ReadName("Enter account name: ");
-                            int rate = ValidateInput("Enter interest rate (in decimal form): ", 0, 1);
+                            // decimal rate = ValidateInput("Enter interest rate (in decimal form): ", 0, 1);
+                            Console.Write("Enter interest rate (0 to 1): ");
+                            decimal rate = Convert.ToDecimal(Console.ReadLine());
+
                             var savingsAccounts = new SavingsAccount(savingsOwnerName, rate);
                             accounts.Add(savingsAccounts);
                             Console.WriteLine($"Account #{savingsAccounts.AccountNumber} opened for {savingsOwnerName}");
@@ -182,6 +203,86 @@ namespace BankAccountSystem
                             while (true)
                             {
                                 savingsMenuChoice = SavingsMenu();
+
+                                switch(savingsMenuChoice)
+                                {
+                                    case 1:
+                                        amount = ValidateInput("Enter deposit amount: ", 1, 100000);
+                                        savingsAccounts.Deposit(amount);
+                                        Console.WriteLine("Deposit successful.");
+
+                                        Console.Write("Press any key to proceed.");
+                                        Console.ReadKey();
+                                        Console.Clear();
+
+                                        break;
+
+                                    case 2:
+                                        savingsAccounts.AddInterest();
+                                        Console.WriteLine("Interest added successfully.");
+
+                                        break;
+                                    
+                                    case 3:
+                                        amount = ValidateInput("Enter withdraw amount: ", 1, (double)savingsAccounts.Balance);
+                                        savingsAccounts.Withdraw(amount);
+
+                                        Console.Write("Press any key to proceed.");
+                                        Console.ReadKey();
+                                        Console.Clear();
+
+                                        break;
+
+                                    case 4:
+                                        Console.WriteLine(savingsAccounts);
+
+                                        Console.Write("Press any key to proceed.");
+                                        Console.ReadKey();
+                                        Console.Clear();
+
+                                        break;
+
+                                    case 5:
+                                        int number;
+                                        Console.Write("Enter number: ");
+                                        number = Convert.ToInt32(Console.ReadLine());
+
+                                        var found = accounts.Find(a => a.AccountNumber == number);
+
+                                        if (found == null)
+                                        {
+                                            Console.WriteLine("Account not found");
+                                            break;
+                                        }
+
+                                        Console.WriteLine($"Statement found for {found.Owner}");
+
+                                        if (found.Transactions.Count == 0)
+                                        {
+                                            Console.WriteLine("No transactions found yet");
+                                        }
+                                        else
+                                        {
+                                            foreach(Transaction t in found.Transactions)
+                                            {
+                                                Console.WriteLine(t);
+                                            }
+                                        }
+
+                                        Console.Write("Press any key to proceed.");
+                                        Console.ReadKey();
+                                        Console.Clear();
+
+                                        break;
+
+                                    case 6:
+                                        Console.WriteLine("Exiting...");
+                                        return;
+
+                                    default:
+                                        // default option comes here
+                                        break;
+                                }
 
                                 // PAUSED HERE
                             }

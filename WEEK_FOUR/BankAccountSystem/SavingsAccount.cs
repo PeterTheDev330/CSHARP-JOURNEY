@@ -1,10 +1,12 @@
 using System;
+using BankAccountSysem;
 
 namespace BankAccountSystem;
 
-class SavingsAccount : BankAccount
+sealed class SavingsAccount : BankAccount, IInterestBearing
 {
 
+   public const decimal MinimumBalance = 50m;
    public decimal InterestRate { get; }
    public SavingsAccount(string owner, decimal rate, decimal openingBalance = 0) : base(owner, openingBalance)
    {
@@ -24,5 +26,21 @@ class SavingsAccount : BankAccount
       {
          Deposit(interest);
       }
-   } 
+   }
+
+   public override void Withdraw(decimal amount)
+   {
+      int numberOfMonths;
+
+      numberOfMonths = ValidateInput("How many months has it been: ", 1, 120);
+      if ((numberOfMonths > 6) && (Balance - amount > MinimumBalance))
+      {
+         base.Withdraw(amount);
+         Console.WriteLine("Wtihdraw successful.");
+      }
+      else
+      {
+         Console.WriteLine($"Eligibility period not reached (6 months or more) or the savings account must hold at least {MinimumBalance:F2}.");
+      }
+   }  
 }

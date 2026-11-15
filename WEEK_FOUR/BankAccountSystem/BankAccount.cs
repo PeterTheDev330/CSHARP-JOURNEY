@@ -62,7 +62,7 @@ class BankAccount
         _transactions.Add(new Transaction(TransactionType.Deposit, amount, Balance));
     }
 
-    public void Withdraw(decimal amount)
+    public virtual void Withdraw(decimal amount)
     {
 
         if(amount < 0)
